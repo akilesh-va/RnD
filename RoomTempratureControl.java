@@ -1,6 +1,10 @@
 public class RoomTempratureControl {
+      MetricsCalc mCalc;
+      public RoomTempratureControl() {
+             mCalc = new MetricsCalc();
+      }
       public boolean turnHeaterOn(double roominSquareFeet, double tempInCelcius, RoomType roomType) {
-        MetricsCalc mCalc = new MetricsCalc();
+        
         double roomsizeInMeters = mCalc.feet2Meter(roominSquareFeet);
         double tempInFarenheit = mCalc.celcius2Farenheit(tempInCelcius);
 
